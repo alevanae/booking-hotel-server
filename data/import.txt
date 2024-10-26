@@ -1,0 +1,2 @@
+C:\Program Files\MongoDB\Server\7.0\bin>
+mongoimport --uri "mongodb+srv://anhtri:3VDFcPPyrmCRjmnA@mongo.eklzgvx.mongodb.net/asm3?retryWrites=true&w=majority&appName=mongo" --collection products --file "C:\Users\Thong Tri\Desktop\nodejs\asm3\server\data.json" --jsonArray
