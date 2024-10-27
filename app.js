@@ -3,6 +3,7 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
+const helmet = require("helmet");
 
 const transactionRoute = require("./routes/transactionRoute");
 const userRoute = require("./routes/userRoute");
@@ -14,6 +15,7 @@ const app = express();
 const uri = process.env.DATABASE;
 
 app.use(cors());
+app.use(helmet());
 app.use(express.json());
 app.use(express.static("public"));
 
