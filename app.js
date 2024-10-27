@@ -9,8 +9,7 @@ const hotelRoute = require("./routes/hotelRoute");
 const Transaction = require("./models/transaction");
 
 const app = express();
-const uri =
-  "mongodb+srv://anhtri:3VDFcPPyrmCRjmnA@mongo.eklzgvx.mongodb.net/asm2?retryWrites=true&w=majority&appName=mongo";
+const uri = process.env.DATABASE;
 
 app.use(cors());
 app.use(express.json());
@@ -44,6 +43,6 @@ app.use("/transaction", transactionRoute);
 async function connectDb() {
   mongoose.connect(uri);
   console.log("connected");
-  app.listen(5000);
+  app.listen(process.env.PORT);
 }
 connectDb();
